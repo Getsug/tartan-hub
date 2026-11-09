@@ -1,0 +1,63 @@
+/* CMU-inspired design tokens: change these variables to re-theme the entire site. */
+:root { --red:#bb0000; --black:#1d1d1b; --gray:#666666; --light:#f2f2f2; --cream:#f9f6f0; --gold:#c8a84e; --white:#fff; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--black); background:var(--cream); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+a { color:inherit; }
+/* The central panel mirrors the rounded, elevated container in your HTML reference. */
+.page-shell { min-height:100vh; padding:36px 18px; display:flex; justify-content:center; align-items:center; }
+.hub { width:100%; max-width:1280px; background:var(--white); border-radius:38px; border-top:6px solid var(--red); box-shadow:0 24px 48px -16px #1d1d1b2e,0 0 0 1px var(--light); padding:45px 36px 28px; }
+/* Keep the university name at the top-left, matching the supplied wordmark layout. */
+.brand-section { display:flex; justify-content:flex-start; margin-bottom:48px; }
+.brand-text { display:flex; flex-direction:column; align-items:flex-start; text-align:left; gap:0; font-family:Georgia,"Times New Roman",serif; }
+.uni-name { color:var(--red); font-size:clamp(17px,2.6vw,30px); font-weight:700; letter-spacing:-.055em; line-height:1.05; white-space:nowrap; }
+.uni-campus { color:var(--gray); font-size:clamp(19px,2.8vw,32px); font-weight:700; letter-spacing:-.055em; line-height:1.05; }
+/* Tartan Hub is the single primary heading; the tagline is supporting copy. */
+.hero { text-align:center; padding:0 0 35px; margin-bottom:34px; border-bottom:1px solid var(--light); }
+.hero h1 { margin:0; font-size:clamp(40px,6vw,68px); font-weight:850; letter-spacing:-.055em; line-height:1.1; }
+.hero h1 span { color:var(--red); }
+.hero p { margin:14px 0 0; color:var(--gray); font-size:clamp(14px,2vw,18px); line-height:1.5; }
+/* Four columns on desktops, two on tablets, one on phones. */
+.card-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-bottom:34px; }
+.card-anchor { text-decoration:none; display:flex; min-width:0; border-radius:30px; }
+.hub-card { display:flex; flex-direction:column; width:100%; min-height:300px; padding:26px 22px 20px; border-radius:30px; border:1px solid var(--light); box-shadow:0 6px 18px #1d1d1b12; transition:transform .18s,box-shadow .18s,border-color .18s; }
+.card-anchor:hover .hub-card,.card-anchor:focus-visible .hub-card { transform:translateY(-5px); border-color:var(--red); box-shadow:0 20px 28px -12px #bb000029; }
+.card-anchor:focus-visible { outline:3px solid var(--red); outline-offset:4px; }
+.is-coming .hub-card { background:#fcfaf7; border:1px dashed var(--gold); }
+.is-coming:hover .hub-card,.is-coming:focus-visible .hub-card { border-color:var(--gold); box-shadow:0 20px 28px -12px #c8a84e40; }
+.card-icon { width:52px; height:52px; border-radius:18px; display:flex; align-items:center; justify-content:center; background:#bb000014; color:var(--red); margin-bottom:19px; }
+.is-coming .card-icon { color:#a48126; background:#c8a84e20; }
+.card-title-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.card-title-row h3 { font-size:23px; letter-spacing:-.4px; margin:0 0 7px; }
+.status { display:inline-flex; padding:4px 9px; border-radius:30px; text-transform:uppercase; font-size:10px; font-weight:850; letter-spacing:.3px; margin-bottom:6px; white-space:nowrap; }
+.status-live { background:#bb000019; color:var(--red); }
+.status-soon { background:#c8a84e2b; color:#84691e; }
+.eyebrow { text-transform:uppercase; font-size:11px; letter-spacing:.8px; font-weight:800; color:var(--gray); margin-bottom:12px; }
+.hub-card p { font-size:14px; line-height:1.65; color:#3a3a38; margin:0 0 24px; flex:1; }
+.card-action { border-top:1px solid var(--light); padding-top:15px; display:flex; align-items:center; gap:9px; color:var(--red); font-weight:750; font-size:14px; }
+.is-coming .card-action { color:#927322; }
+.card-anchor:hover .card-action svg { transform:translateX(3px); }
+.card-action svg { transition:transform .18s; }
+.explainer-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-bottom:32px; }
+.explainer { background:#fcfaf7; border-left:4px solid var(--gold); border-radius:20px; padding:23px 26px; scroll-margin-top:30px; }
+.explainer h3 { display:flex; align-items:center; gap:10px; font-size:19px; margin:0 0 12px; }
+.explainer h3 svg { color:#ad8b34; }
+.explainer p { font-size:14px; line-height:1.65; margin:0; color:#3a3a38; }
+.micro { display:flex; align-items:center; gap:7px; color:var(--gray); font-size:12px; margin-top:13px; }
+.micro svg { color:var(--gold); flex-shrink:0; }
+.credit-area { background:var(--black); border-radius:23px; padding:23px 27px; color:white; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.credit-text { display:flex; align-items:center; gap:11px; font-size:14px; line-height:1.5; }
+.credit-text>svg { color:var(--gold); flex-shrink:0; }
+.credit-text a { color:var(--gold); text-decoration:none; border-bottom:1px dotted var(--gold); font-weight:700; }
+.credit-text a svg,.footer a svg { display:inline; vertical-align:middle; }
+.tracker-credit { display:flex; align-items:center; gap:8px; border-radius:30px; background:#ffffff1c; padding:9px 14px; font-size:13px; }
+.tracker-credit svg { color:var(--gold); }
+.suggestion-banner { display:flex; align-items:center; gap:16px; margin-top:26px; border-radius:18px; padding:18px 22px; border:1px dashed var(--gold); background:linear-gradient(135deg,#bb00000a,#c8a84e15); }
+.suggestion-banner>svg { color:var(--red); flex-shrink:0; }
+.suggestion-banner p { margin:0; color:#3a3a38; font-size:14px; line-height:1.6; }
+.suggestion-banner strong { color:var(--red); }
+.footer { display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:5px; margin-top:20px; color:var(--gray); font-size:12px; }
+.footer a { color:var(--red); font-weight:700; text-decoration:none; }
+@media(max-width:1000px) { .card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .hub { padding:34px 25px 25px; } }
+@media(max-width:620px) { .page-shell { padding:14px 10px; } .hub { border-radius:25px; padding:28px 18px 20px; } .card-grid,.explainer-grid { grid-template-columns:1fr; gap:15px; } .hub-card { min-height:255px; } .brand-section { margin-bottom:35px; } .uni-name { font-size:clamp(16px,4.5vw,23px); } .credit-area { padding:20px; } .suggestion-banner { align-items:flex-start; } .footer { justify-content:flex-start; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
