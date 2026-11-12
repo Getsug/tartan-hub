@@ -5,6 +5,7 @@ import { HubCard } from "../components/HubCard";
 const LINKS = {
   events: "https://tartan-now-jht6-silk.vercel.app/",
   opportunities: "https://docs.google.com/spreadsheets/d/1x0H5-JsuZvz5TORptWrY2Dqi8bE988VH/edit?gid=319979026#gid=319979026",
+  creator: "https://herbert-campaign.vercel.app/",
   contributor: "https://damilareadekeye.com/vote-damilare/",
 };
 
@@ -43,20 +44,22 @@ export default function Home() {
         </section>
 
         {/* Keep credit visible and link to the original contributor's page. */}
-        <aside className="credit-area" aria-label="Contributor credits"><div className="credit-text"><Heart size={21} aria-hidden="true" /><span>Opportunity Tracker built by <a href={LINKS.contributor} target="_blank" rel="noopener noreferrer">Damilare <ArrowUpRight size={13} aria-hidden="true" /></a> &amp; <strong>Precious Adeniran</strong> · Together</span></div><div className="tracker-credit"><Table2 size={17} aria-hidden="true" /> Student-built · verified opportunities</div></aside>
+        {/* <aside className="credit-area" aria-label="Contributor credits"><div className="credit-text"><Heart size={21} aria-hidden="true" /><span>Opportunity Tracker buitlt by <a href={LINKS.creator} target="_blank" rel="noopener noreferrer">Damilare<ArrowUpRight size={13} aria-hidden="true" /></a> &amp; <strong>Precious Adeniran</strong> · Together</span></div><div className="tracker-credit"><Table2 size={17} aria-hidden="true" /> Student-built · verified opportunities</div></aside> */}
+        <aside className="credit-area" aria-label="Contributor credits"><div className="credit-text"><Heart size={21} aria-hidden="true" /><span>Tartan Hub is built by <a href={LINKS.creator} target="_blank" rel="noopener noreferrer">Herbert Okuthe<ArrowUpRight size={13} aria-hidden="true" /></a> </span></div><div className="tracker-credit"><Table2 size={17} aria-hidden="true" /> Student-built</div></aside>
 
         <aside className="suggestion-banner"><Lightbulb size={25} aria-hidden="true" /><p><strong>Message:</strong> Tartan Hub isn't about one person or one initiative. It's about bringing together the incredible work already happening at CMU-Africa. It makes it easier to discover, support and build upon what we do. A strong community isn't built by chance, we make it together</p></aside>
 
         <footer className="footer"><Link2 size={14} aria-hidden="true" />
-          The Voice of Your Vision
+          Opportunity Tracker is built by
           <a
-            href=""
+            href={LINKS.contributor}
             target="_blank"
             rel="noopener noreferrer"
           >
-            This is just the beginning. Discover the vision.
+            Damilare
             <ArrowUpRight size={12} aria-hidden="true" />
           </a>
+          and Precious.
         </footer>
       </div>
     </main>
