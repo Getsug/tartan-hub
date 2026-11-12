@@ -30,8 +30,8 @@ export default function Home() {
 
         <section aria-label="Explore Tartan Hub">
           <div className="card-grid">
-            <HubCard title="Events" eyebrow="Tartan Now" description="Discover what's happening on campus, explore upcoming activities and stay informed." Icon={CalendarDays} href={LINKS.events} action="Go to Tartan Now" isNew external />
-            <HubCard title="Opportunities" eyebrow="Verified tracker" description="Explore scholarships, internships, research opportunities and resources for academic growth." Icon={BriefcaseBusiness} href={LINKS.opportunities} action="Open tracker" external />
+            <HubCard title="Events" eyebrow="Tartan Now" description="Discover what's happening on campus, explore upcoming activities and stay informed." Icon={CalendarDays} href={LINKS.events} action="Open Tartan Now" isNew external />
+            <HubCard title="Opportunities" eyebrow="Verified tracker" description="Explore scholarships, internships, research opportunities and resources for academic growth." Icon={BriefcaseBusiness} href={LINKS.opportunities} action="Open Opportunities tracker" external />
             <HubCard title="Knowledge Bank" eyebrow="Guides, FAQs & resources" description="Student-contributed guides, scholarship application tips, research advice, useful tools and lessons from previous cohorts." Icon={BookOpen} href="#knowledge-bank" action="Learn more" comingSoon />
             <HubCard title="Guild Updates" eyebrow="Decisions & progress" description="A transparent record of Guild activities, decisions, ongoing initiatives and progress for every student." Icon={Gavel} href="#guild-updates" action="Learn more" comingSoon />
           </div>
